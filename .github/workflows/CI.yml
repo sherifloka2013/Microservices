@@ -72,9 +72,9 @@ jobs:
       - name: Azure login
         uses: azure/login@v1.4.6
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: "4fd797f1-0df9-4c6f-9064-f8d87a9e6703" #${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: "29253059-3360-47aa-b006-0b348878784f" #${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: "b059d3da-d469-4620-a868-895ad5e41dc2" #${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Set up kubelogin for non-interactive login
         uses: azure/use-kubelogin@v1
