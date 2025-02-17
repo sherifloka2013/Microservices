@@ -45,6 +45,9 @@ env:
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write  # This line grants permission to write the ID token
     steps:
       - uses: actions/checkout@v4
 
@@ -62,6 +65,9 @@ jobs:
         with:
           push: true
           tags: ${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
+
+   #   - name: Set Azure Cloud Context
+   #     run: az cloud set -n azurecloud
 
   deploy:
     needs: build_and_push
