@@ -36,11 +36,11 @@ on:
 env:
   DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
   DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-  CONTAINER_NAME: ${{env.CONTAINER_NAME}}
-  DOCKER_IMAGE_NAME: ${{env.DOCKER_IMAGE_NAME}}
-  RESOURCE_GROUP: ${{env.RESOURCE_GROUP}}
-  CLUSTER_NAME: ${{env.CLUSTER_NAME}}
-  DEPLOYMENT_MANIFEST_PATH: ${{env.DEPLOYMENT_MANIFEST_PATH}}
+  CONTAINER_NAME: "sherifhassanmagdy/microservices-web" #${{env.CONTAINER_NAME}}
+  DOCKER_IMAGE_NAME: "microservices-web" #${{env.DOCKER_IMAGE_NAME}}
+  RESOURCE_GROUP: "myResourceGroup" #${{env.RESOURCE_GROUP}}
+  CLUSTER_NAME: "myAKSCluster" #${{env.CLUSTER_NAME}}
+  DEPLOYMENT_MANIFEST_PATH: "deployment.yaml" #${{env.DEPLOYMENT_MANIFEST_PATH}}
 
 jobs:
   build_and_push:
