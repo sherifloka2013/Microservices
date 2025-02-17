@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pwc-microservice-task
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: sherifhassanmagdy/microservices-web
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - name: app-data
+          mountPath: /app/data
+      volumes:
+      - name: app-data
+        azureFile:
+          secretName: azure-secret
+          shareName: fileshare
+          readOnly: false
