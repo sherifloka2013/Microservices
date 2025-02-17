@@ -34,8 +34,8 @@ on:
   workflow_dispatch:
 
 env:
-  DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
-  DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+  DOCKER_USERNAME: "sherifhassan" #${{secrets.DOCKER_USERNAME}}
+  DOCKER_PASSWORD: "HhuBt%8AYY*u6CY" #${{secrets.DOCKER_PASSWORD}}
   CONTAINER_NAME: "sherifhassanmagdy/microservices-web" #${{env.CONTAINER_NAME}}
   DOCKER_IMAGE_NAME: "microservices-web" #${{env.DOCKER_IMAGE_NAME}}
   RESOURCE_GROUP: "myResourceGroup" #${{env.RESOURCE_GROUP}}
