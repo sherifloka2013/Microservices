@@ -36,8 +36,8 @@ on:
 env:
   DOCKER_USERNAME: "sherifhassanmagdy" #${{secrets.DOCKER_USERNAME}} #"sherifhassan" #
   DOCKER_PASSWORD: "dckr_pat_hh7dlhzpWna-hCvlYlI1ebpMt9E" #${{secrets.DOCKER_PASSWORD}} #"HhuBt%8AYY*u6CY" #
-  CONTAINER_NAME: "sherifhassanmagdy/microservices-web" #${{env.CONTAINER_NAME}}
-  DOCKER_IMAGE_NAME: "microservices-web" #${{env.DOCKER_IMAGE_NAME}}
+  CONTAINER_NAME: "microservices-web" #${{env.CONTAINER_NAME}}
+  DOCKER_IMAGE_NAME: "sherifhassanmagdy/microservices-web" #${{env.DOCKER_IMAGE_NAME}}
   RESOURCE_GROUP: "myResourceGroup" #${{env.RESOURCE_GROUP}}
   CLUSTER_NAME: "myAKSCluster" #${{env.CLUSTER_NAME}}
   DEPLOYMENT_MANIFEST_PATH: "deployment.yaml" #${{env.DEPLOYMENT_MANIFEST_PATH}}
