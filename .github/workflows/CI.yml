@@ -45,9 +45,6 @@ env:
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write  # This line grants permission to write the ID token
     steps:
       - uses: actions/checkout@v4
 
@@ -72,9 +69,11 @@ jobs:
   deploy:
     needs: build_and_push
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write  # This line grants permission to write the ID token
     steps:
       - uses: actions/checkout@v4
-
       - name: Azure login
         uses: azure/login@v1.4.6
         with:
