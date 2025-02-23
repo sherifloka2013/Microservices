@@ -84,7 +84,7 @@ jobs:
       - name: Set up kubelogin for non-interactive login
         uses: azure/use-kubelogin@v1
         env:
-          GITHUB_TOKEN: "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" #${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         with:
           kubelogin-version: 'latest'
       - name: Get K8s context
