@@ -18,3 +18,12 @@ terraform init
 terraform plan
 terraform apply
 ```
+
+# K8s cluster deployment
+```bash
+kubectl get nodes
+kubectl apply -f deployment.yaml 
+kubectl apply -f service.yaml
+kubectl get deployment && kubectl get service 
+kubectl describe deployment pwc-microservice-task
+```
